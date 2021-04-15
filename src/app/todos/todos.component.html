@@ -4,16 +4,64 @@
 
 <div class="container">
   <div class="add-todo-box">
-    <h1 class="title is-5">New Todo</h1>
-    <div class="field is-grouped">
-      <p class="control is-expanded">
-        <input class="input" type="text" placeholder="Type todo text here..." />
-      </p>
-      <p class="control">
-        <button class="button alt-gradient-button">
-          <i class="material-icons"> add </i>Add
-        </button>
-      </p>
-    </div>
+    <form>
+      <h1 class="title is-5">New Todo</h1>
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input
+            class="input"
+            type="text"
+            placeholder="Type todo text here..."
+          />
+        </p>
+        <p class="control">
+          <button class="button alt-gradient-button">
+            <i class="material-icons"> add </i>Add
+          </button>
+        </p>
+      </div>
+    </form>
   </div>
 </div>
+
+<section class="section">
+  <div class="container">
+    <div class="todo-list">
+      <div class="todo-item completed">
+        <div class="check-box">
+          <i class="material-icons">check</i>
+        </div>
+        <div class="todo-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
+          officia quos commodi obcaecati, a, deleniti quo explicabo provident
+          voluptatibus voluptate velit reprehenderit eveniet, excepturi dolores
+          error. Dignissimos illum rem beatae nemo quibusdam consequuntur! Eius
+          asperiores nihil harum. Culpa, dolore illum.
+        </div>
+        <div class="todo-controls-box">
+          <div class="todo-control-button">
+            <i class="material-icons"> edit </i>
+          </div>
+          <div class="todo-control-button is-danger">
+            <i class="material-icons"> delete </i>
+          </div>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <div class="check-box">
+          <i class="material-icons">check</i>
+        </div>
+        <div class="todo-text">This only has one line of text.</div>
+        <div class="todo-controls-box">
+          <div class="todo-control-button">
+            <i class="material-icons"> edit </i>
+          </div>
+          <div class="todo-control-button is-danger">
+            <i class="material-icons"> delete </i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
