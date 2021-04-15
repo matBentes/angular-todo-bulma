@@ -8,7 +8,7 @@
   </div>
   <div class="todo-text">{{ todo.text }}</div>
   <div class="todo-controls-box" (click)="$event.stopPropagation()">
-    <div class="todo-control-button">
+    <div class="todo-control-button" (click)="onEditClicked()">
       <i class="material-icons"> edit </i>
     </div>
     <div class="todo-control-button is-danger">

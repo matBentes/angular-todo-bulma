@@ -41,9 +41,10 @@
   <div class="container">
     <div class="todo-list">
       <app-todo-item
-        *ngFor="let todo of todos"
+        *ngFor="let todo of todos; index as i"
         [todo]="todo"
         (todoClicked)="toggleClicked(todo)"
+        (editClicked)="editTodo(i, todo)"
       ></app-todo-item>
     </div>
   </div>
