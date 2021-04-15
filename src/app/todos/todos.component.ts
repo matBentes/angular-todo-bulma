@@ -10,6 +10,7 @@ import { Todo } from '../shared/todo.model';
 })
 export class TodosComponent implements OnInit {
   todos: Todo[];
+  showValidationErrors: boolean;
 
   constructor(private dataService: DataService) {}
 
@@ -18,6 +19,16 @@ export class TodosComponent implements OnInit {
   }
 
   onFormSubmit(form: NgForm) {
+    console.log('form submitted');
+    console.log(form);
+
+    if (form.invalid) {
+      return (this.showValidationErrors = true);
+    }
+
     this.dataService.addTodo(new Todo(form.value.text));
+
+    this.showValidationErrors = false;
+    form.reset();
   }
 }

@@ -6,11 +6,14 @@
   <div class="add-todo-box">
     <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
       <h1 class="title is-5">New Todo</h1>
-      <div class="field is-grouped">
+      <div class="field is-grouped my-0">
         <p class="control is-expanded">
           <input
             ngModel
+            #todoTextField="ngModel"
             name="text"
+            required
+            minlength="2"
             class="input"
             type="text"
             placeholder="Type todo text here..."
@@ -20,6 +23,14 @@
           <button type="submit" class="button alt-gradient-button">
             <i class="material-icons"> add </i>Add
           </button>
+        </p>
+      </div>
+      <div *ngIf="todoTextField.invalid && showValidationErrors">
+        <p class="help is-danger" *ngIf="todoTextField.errors.required">
+          Please enter the text of your TODO
+        </p>
+        <p class="help is-danger" *ngIf="todoTextField.errors.minlength">
+          TODO text must be at least 2 characters
         </p>
       </div>
     </form>
