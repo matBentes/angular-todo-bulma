@@ -40,7 +40,11 @@
 <section class="section">
   <div class="container">
     <div class="todo-list">
-      <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+      <app-todo-item
+        *ngFor="let todo of todos"
+        [todo]="todo"
+        (todoClicked)="toggleClicked(todo)"
+      ></app-todo-item>
     </div>
   </div>
 </section>

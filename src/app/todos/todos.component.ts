@@ -28,4 +28,9 @@ export class TodosComponent implements OnInit {
     this.showValidationErrors = false;
     form.reset();
   }
+
+  toggleClicked(todo: Todo) {
+    todo.completed = !todo.completed;
+    console.log(todo);
+  }
 }
