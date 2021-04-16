@@ -50,4 +50,10 @@ export class TodosComponent implements OnInit {
       }
     });
   }
+
+  deleteTodo(index: number) {
+    console.log('deleted', index);
+
+    this.dataService.deleteTodo(index);
+  }
 }
